@@ -1,5 +1,5 @@
 {
-  "manifest_version": 3.0.0,
+  "manifest_version": 2,
 
   "name": "chromePlug",
   "description": "专为笔试而生，让每个人不为笔试而烦恼！",
