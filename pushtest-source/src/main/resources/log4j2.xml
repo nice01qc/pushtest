@@ -1,0 +1,34 @@
+<Configuration status="WARN" monitorInterval="300">
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+        </Console>
+
+        <File name="RedisToolFile" fileName="./RedisTool.log">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+        </File>
+
+        <File name="oterFile" fileName="./other.log">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+        </File>
+
+    </Appenders>
+
+    <Loggers>
+        <Logger name="RedisTool" level="trace" additivity="true">
+            <AppenderRef ref="RedisToolFile" />
+        </Logger>
+        <Root level="fatal">
+            <AppenderRef ref="Console" />
+        </Root>
+    </Loggers>
+
+    <Loggers>
+        <Logger name="other" level="trace" additivity="true">
+            <AppenderRef ref="oterFile" />
+        </Logger>
+        <Root level="fatal">
+            <AppenderRef ref="Console" />
+        </Root>
+    </Loggers>
+</Configuration>

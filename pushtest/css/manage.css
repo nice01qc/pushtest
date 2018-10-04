@@ -1,0 +1,46 @@
+div#part1,div#part2{
+	padding: 10px 20px;
+	width: 800px;
+	margin: auto;
+
+}
+
+div#part1 div{
+	margin: 5px 0;
+}
+
+div#myroom{
+	border: 2px solid #CCFFCC;
+	border-radius: 20px;
+	background: #900000;
+	padding: 10px 10px;
+	width: 80px;
+	color: white;
+	text-align: center;
+}
+div#clientRoom{
+	padding: 40px;
+}
+div#part1 div span{
+    padding:5px 10px;
+    margin:10px 15px;
+    border:2px solid #33CCCC;
+    border-radius: 20px;
+}
+
+div#part2 button,div#part2 input,div#part2 span{
+	margin: 10px;
+	padding: 5px 10px;
+	border: 2px solid #900000;
+	border-radius: 30px;
+}
+
+div#part2 button{
+	background: #CCFFCC;
+	opacity: 0.7;
+}
+
+div#part2 button:hover{
+	background: #FF6633;
+	opacity: 1;
+}
