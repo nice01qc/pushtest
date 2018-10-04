@@ -5,11 +5,11 @@ bs截图小插件+服务器
 
 |- pushtest
 
-​	|- chromePlug  :
+--------|- chromePlug  :
 
-​	|- pushtest :  已经编译好，直接放入Tomcat的webapp便可以启动服务器（只需将                    pushtest\pushtest\js\para.js的ip地址改为自己的服务器ip+端口）
+--------|- pushtest :  已经编译好，直接放入Tomcat的webapp便可以启动服务器（只需将                    pushtest\pushtest\js\para.js的ip地址改为自己的服务器ip+端口）
 
-​	|- pushtest-source : 服务器源码
+--------|- pushtest-source : 服务器源码
 
 #### 服务器搭建
 
