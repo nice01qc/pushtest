@@ -207,21 +207,21 @@ function emphasizeClickImg(buttoms) {
 
 
 // 与插件通信用的
-var headinput = document.getElementById("headinput");
-var headtijiao = document.getElementById("headtijiao");
-headtijiao.onclick = function () {
-    if (!windowroom.match(/^[a-zA-Z0-9]+$/g)) {
-        alert("非法房间号");
-        headinput.value = "no 发送";
-    } else {
-        var text = headinput.value;
-        var xhr = new XMLHttpRequest();
-        xhr.open('POST', window.site + 'communication', true);
-        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-        xhr.send("result=" + encodeURIComponent(text) + "&room=" + encodeURIComponent(windowroom));
-        headinput.value = "ok,已发送";
-    }
-}
+// var headinput = document.getElementById("headinput");
+// var headtijiao = document.getElementById("headtijiao");
+// headtijiao.onclick = function () {
+//     if (!windowroom.match(/^[a-zA-Z0-9]+$/g)) {
+//         alert("非法房间号");
+//         headinput.value = "no 发送";
+//     } else {
+//         var text = headinput.value;
+//         var xhr = new XMLHttpRequest();
+//         xhr.open('POST', window.site + 'communication', true);
+//         xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+//         xhr.send("result=" + encodeURIComponent(text) + "&room=" + encodeURIComponent(windowroom));
+//         headinput.value = "ok,已发送";
+//     }
+// }
 
 // 转换图片状态
 function changeImgStateNO(num) {
