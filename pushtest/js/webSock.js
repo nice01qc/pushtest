@@ -87,17 +87,41 @@ function sendRoom() {
 //将消息显示在网页上
 function setMessageInnerHTML(innerHTML) {
     var message = document.getElementById('message');
+
+
+
     var div = document.createElement("div");
+    var input = document.createElement("input");
+    input.value = innerHTML;
+    input.style.width = "135px";
+    input.style.padding = "2px";
+    div.append(input);
+    var button1 = document.createElement("button");
+    button1.style.borderRadius = "10px";
+    var textNode = document.createTextNode("copy");
+    button1.append(textNode);
+    button1.addEventListener('click', function(eve){
+        input.select();
+        if (document.execCommand('copy')) {
+            document.execCommand('copy');
+            console.log('复制成功');
+        }
+    });
+    button1.style.marginLeft = "10px";
+    button1.style.padding = "4px 5px";
+    div.append(button1);
+
     var a = document.createElement("a");
     a.href = "https:www.baidu.com/s?wd=" + innerHTML;
     a.target = "_Blank";
     a.style.textDecoration = "none";
-    var textNode = document.createTextNode(innerHTML);
+    a.style.display = "inline-block";
+    a.style.width = "50px";
+    a.style.height = "20px";
+    a.style.marginLeft = "10px";
+    textNode = document.createTextNode("baidu");
     a.append(textNode);
     div.append(a);
-    div.ondblclick = function () {
-        this.parentNode.removeChild(this);
-    }
     div.style.border = "2px solid " + getRandomColor();
     message.appendChild(div);
 }
