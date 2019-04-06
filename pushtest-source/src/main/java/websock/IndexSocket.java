@@ -60,7 +60,7 @@ public class IndexSocket {
             if (this.room == null || this.room.equals("")) return;
             ism.setRoom(this.room);
             Answer answer = ism.getAnswers();
-            if (!answerHashMap.contains(this.room)) {
+            if (!answerHashMap.containsKey(this.room)) {
                 answerHashMap.put(this.room, new HashMap<String, String>());
             }
             HashMap<String, String> hashMap = answerHashMap.get(this.room);
